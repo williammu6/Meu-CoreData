@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="Contato" representedClassName=".Contato" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="grupoContatos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GrupoContatos" inverseName="contato" inverseEntity="GrupoContatos" syncable="YES"/>
+    </entity>
+    <entity name="Entity" syncable="YES"/>
+    <entity name="GrupoContatos" representedClassName=".GrupoContatos" syncable="YES">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contato" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contato" inverseName="grupoContatos" inverseEntity="Contato" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contato" positionX="-63" positionY="-45" width="128" height="88"/>
+        <element name="GrupoContatos" positionX="162" positionY="-30" width="128" height="73"/>
+        <element name="Entity" positionX="108" positionY="126" width="128" height="45"/>
+    </elements>
 </model>

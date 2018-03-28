@@ -1,25 +1,183 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meu_DataCore" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EK9-y0-VA6">
+                                <rect key="frame" x="20" y="48" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-LM-ALZ">
+                                <rect key="frame" x="20" y="93" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f63-Cm-k5d">
+                                <rect key="frame" x="0.0" y="130" width="375" height="30"/>
+                                <state key="normal" title="Inserir Contato"/>
+                                <connections>
+                                    <action selector="Inserir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YRu-8u-0ZK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gw-VE-3De">
+                                <rect key="frame" x="16" y="168" width="343" height="30"/>
+                                <state key="normal" title="Buscar Tudo"/>
+                                <connections>
+                                    <action selector="searchAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVW-aG-a86"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2TH-DC-AIv">
+                                <rect key="frame" x="20" y="227" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MO-zW-tr3">
+                                <rect key="frame" x="20" y="278" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4x-WB-ZKW">
+                                <rect key="frame" x="46" y="328" width="71" height="30"/>
+                                <state key="normal" title="Preencher"/>
+                                <connections>
+                                    <action selector="Preencher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7Q-Os-Wrc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIH-nI-ETh">
+                                <rect key="frame" x="283" y="328" width="46" height="30"/>
+                                <state key="normal" title="Alterar"/>
+                                <connections>
+                                    <action selector="Alterar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XbU-bC-Fuv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-MO-7oc">
+                                <rect key="frame" x="20" y="378" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSB-9A-Fcy">
+                                <rect key="frame" x="20" y="417" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgA-XH-oj6">
+                                <rect key="frame" x="46" y="467" width="71" height="30"/>
+                                <state key="normal" title="Preencher"/>
+                                <connections>
+                                    <action selector="Preencher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVu-6a-U2c"/>
+                                    <action selector="PreencherExcluir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ss-oW-esD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-NP-k6k">
+                                <rect key="frame" x="283" y="467" width="46" height="30"/>
+                                <state key="normal" title="Excluir"/>
+                                <connections>
+                                    <action selector="Excluir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGp-Ml-QZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0MO-zW-tr3" secondAttribute="trailing" constant="20" id="4K6-3v-hrM"/>
+                            <constraint firstItem="CSB-9A-Fcy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="547-DK-BE7"/>
+                            <constraint firstItem="8gw-VE-3De" firstAttribute="top" secondItem="f63-Cm-k5d" secondAttribute="bottom" constant="8" symbolic="YES" id="549-Bg-3XL"/>
+                            <constraint firstAttribute="trailing" secondItem="EK9-y0-VA6" secondAttribute="trailing" constant="20" id="7Y6-yt-Hx4"/>
+                            <constraint firstItem="v4x-WB-ZKW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="328" id="ASm-Rr-7VU"/>
+                            <constraint firstItem="0MO-zW-tr3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="C9D-SG-9bb"/>
+                            <constraint firstItem="n8L-LM-ALZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="FUE-6E-eVY"/>
+                            <constraint firstAttribute="trailing" secondItem="CSB-9A-Fcy" secondAttribute="trailing" constant="20" id="Jf9-iE-csI"/>
+                            <constraint firstItem="f63-Cm-k5d" firstAttribute="top" secondItem="n8L-LM-ALZ" secondAttribute="bottom" constant="7" id="LnS-J4-okU"/>
+                            <constraint firstItem="2TH-DC-AIv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MGQ-xx-BaW"/>
+                            <constraint firstItem="8gw-VE-3De" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="168" id="Man-8g-S47"/>
+                            <constraint firstItem="EK9-y0-VA6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="N6I-6y-07v"/>
+                            <constraint firstAttribute="trailing" secondItem="f63-Cm-k5d" secondAttribute="trailing" id="OjN-Xi-6hi"/>
+                            <constraint firstItem="CSB-9A-Fcy" firstAttribute="top" secondItem="tZf-MO-7oc" secondAttribute="bottom" constant="9" id="PLS-jY-1FF"/>
+                            <constraint firstItem="v4x-WB-ZKW" firstAttribute="top" secondItem="0MO-zW-tr3" secondAttribute="bottom" constant="20" id="PT7-Ag-7bZ"/>
+                            <constraint firstAttribute="trailing" secondItem="n8L-LM-ALZ" secondAttribute="trailing" constant="20" id="XuZ-MI-8CM"/>
+                            <constraint firstItem="tZf-MO-7oc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ya2-I3-qJN"/>
+                            <constraint firstAttribute="trailing" secondItem="tZf-MO-7oc" secondAttribute="trailing" constant="20" id="ZID-hz-LZ9"/>
+                            <constraint firstItem="8gw-VE-3De" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aJ2-vU-hEM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CbX-NP-k6k" secondAttribute="trailing" constant="30" id="ajY-XZ-qMl"/>
+                            <constraint firstItem="CbX-NP-k6k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aqH-tJ-Pcs"/>
+                            <constraint firstItem="MgA-XH-oj6" firstAttribute="top" secondItem="CSB-9A-Fcy" secondAttribute="bottom" constant="20" id="dMV-XY-ejg"/>
+                            <constraint firstItem="n8L-LM-ALZ" firstAttribute="top" secondItem="EK9-y0-VA6" secondAttribute="bottom" constant="15" id="dPR-lr-DtC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8gw-VE-3De" secondAttribute="trailing" id="dtE-ym-t0I"/>
+                            <constraint firstItem="v4x-WB-ZKW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="ejg-H5-ryw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KIH-nI-ETh" secondAttribute="trailing" constant="30" id="gBa-xF-HJg"/>
+                            <constraint firstItem="MgA-XH-oj6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="kp6-7K-wHe"/>
+                            <constraint firstItem="f63-Cm-k5d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l5C-fg-Uie"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MgA-XH-oj6" secondAttribute="trailingMargin" id="omq-qr-VDk"/>
+                            <constraint firstItem="CbX-NP-k6k" firstAttribute="top" secondItem="CSB-9A-Fcy" secondAttribute="bottom" constant="20" id="qgf-92-jDI"/>
+                            <constraint firstItem="tZf-MO-7oc" firstAttribute="top" secondItem="v4x-WB-ZKW" secondAttribute="bottom" constant="20" id="rm4-Af-zEO"/>
+                            <constraint firstItem="EK9-y0-VA6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="vhO-UO-Wev"/>
+                            <constraint firstAttribute="trailing" secondItem="2TH-DC-AIv" secondAttribute="trailing" constant="20" id="wma-ph-eHx"/>
+                            <constraint firstItem="2TH-DC-AIv" firstAttribute="top" secondItem="8gw-VE-3De" secondAttribute="bottom" constant="29" id="z4M-4C-y1a"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EK9-y0-VA6"/>
+                                <exclude reference="n8L-LM-ALZ"/>
+                                <exclude reference="f63-Cm-k5d"/>
+                                <exclude reference="8gw-VE-3De"/>
+                                <exclude reference="2TH-DC-AIv"/>
+                                <exclude reference="0MO-zW-tr3"/>
+                                <exclude reference="v4x-WB-ZKW"/>
+                                <exclude reference="KIH-nI-ETh"/>
+                                <exclude reference="tZf-MO-7oc"/>
+                                <exclude reference="CSB-9A-Fcy"/>
+                                <exclude reference="MgA-XH-oj6"/>
+                                <exclude reference="CbX-NP-k6k"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EK9-y0-VA6"/>
+                                <include reference="n8L-LM-ALZ"/>
+                                <include reference="f63-Cm-k5d"/>
+                                <include reference="8gw-VE-3De"/>
+                                <include reference="2TH-DC-AIv"/>
+                                <include reference="0MO-zW-tr3"/>
+                                <include reference="v4x-WB-ZKW"/>
+                                <include reference="KIH-nI-ETh"/>
+                                <include reference="tZf-MO-7oc"/>
+                                <include reference="CSB-9A-Fcy"/>
+                                <include reference="MgA-XH-oj6"/>
+                                <include reference="CbX-NP-k6k"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailAlterar" destination="0MO-zW-tr3" id="iIV-yr-4wH"/>
+                        <outlet property="emailExcluir" destination="CSB-9A-Fcy" id="b64-9M-rBB"/>
+                        <outlet property="emailIncluir" destination="n8L-LM-ALZ" id="kHI-ln-0V6"/>
+                        <outlet property="nomeAlterar" destination="2TH-DC-AIv" id="Ea4-zR-PkZ"/>
+                        <outlet property="nomeExcluir" destination="tZf-MO-7oc" id="wA9-JO-NYN"/>
+                        <outlet property="nomeIncluir" destination="EK9-y0-VA6" id="IM4-U1-EKL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="307.5"/>
         </scene>
     </scenes>
 </document>

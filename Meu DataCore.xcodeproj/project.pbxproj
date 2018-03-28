@@ -13,6 +13,11 @@
 		3F92ABE11D944DD30012967D /* Meu_DataCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABDF1D944DD30012967D /* Meu_DataCore.xcdatamodeld */; };
 		3F92ABE31D944DD30012967D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F92ABE21D944DD30012967D /* Assets.xcassets */; };
 		3F92ABE61D944DD30012967D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F92ABE41D944DD30012967D /* LaunchScreen.storyboard */; };
+		3F92ABF51D94534A0012967D /* Contato+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABF11D94534A0012967D /* Contato+CoreDataProperties.swift */; };
+		3F92ABF61D94534A0012967D /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABF21D94534A0012967D /* Contato.swift */; };
+		3F92ABF71D94534A0012967D /* GrupoContatos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABF31D94534A0012967D /* GrupoContatos+CoreDataProperties.swift */; };
+		3F92ABF81D94534A0012967D /* GrupoContatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABF41D94534A0012967D /* GrupoContatos.swift */; };
+		3F92ABFB1D9457310012967D /* ContatoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92ABFA1D9457310012967D /* ContatoDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3F92ABE21D944DD30012967D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F92ABE51D944DD30012967D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F92ABE71D944DD30012967D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F92ABF11D94534A0012967D /* Contato+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contato+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F92ABF21D94534A0012967D /* Contato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		3F92ABF31D94534A0012967D /* GrupoContatos+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GrupoContatos+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F92ABF41D94534A0012967D /* GrupoContatos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrupoContatos.swift; sourceTree = "<group>"; };
+		3F92ABFA1D9457310012967D /* ContatoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		3F92ABD71D944DD30012967D /* Meu DataCore */ = {
 			isa = PBXGroup;
 			children = (
-				3F92ABD81D944DD30012967D /* AppDelegate.swift */,
-				3F92ABDA1D944DD30012967D /* ViewController.swift */,
-				3F92ABDC1D944DD30012967D /* Main.storyboard */,
-				3F92ABE21D944DD30012967D /* Assets.xcassets */,
-				3F92ABE41D944DD30012967D /* LaunchScreen.storyboard */,
-				3F92ABE71D944DD30012967D /* Info.plist */,
-				3F92ABDF1D944DD30012967D /* Meu_DataCore.xcdatamodeld */,
+				3F92ABF01D944F3D0012967D /* Model */,
+				3F92ABEF1D944F380012967D /* View */,
+				3F92ABEE1D944F300012967D /* Controller */,
+				3F92ABED1D944F250012967D /* Supporting Files */,
 			);
 			path = "Meu DataCore";
+			sourceTree = "<group>";
+		};
+		3F92ABED1D944F250012967D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F92ABD81D944DD30012967D /* AppDelegate.swift */,
+				3F92ABE21D944DD30012967D /* Assets.xcassets */,
+				3F92ABE71D944DD30012967D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F92ABEE1D944F300012967D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F92ABDA1D944DD30012967D /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F92ABEF1D944F380012967D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F92ABE41D944DD30012967D /* LaunchScreen.storyboard */,
+				3F92ABDC1D944DD30012967D /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F92ABF01D944F3D0012967D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F92ABF91D9456930012967D /* DAO */,
+				3F92ABF11D94534A0012967D /* Contato+CoreDataProperties.swift */,
+				3F92ABF21D94534A0012967D /* Contato.swift */,
+				3F92ABF31D94534A0012967D /* GrupoContatos+CoreDataProperties.swift */,
+				3F92ABF41D94534A0012967D /* GrupoContatos.swift */,
+				3F92ABDF1D944DD30012967D /* Meu_DataCore.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3F92ABF91D9456930012967D /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				3F92ABFA1D9457310012967D /* ContatoDAO.swift */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +154,7 @@
 				TargetAttributes = {
 					3F92ABD41D944DD30012967D = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -138,9 +194,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F92ABF71D94534A0012967D /* GrupoContatos+CoreDataProperties.swift in Sources */,
+				3F92ABF51D94534A0012967D /* Contato+CoreDataProperties.swift in Sources */,
 				3F92ABE11D944DD30012967D /* Meu_DataCore.xcdatamodeld in Sources */,
 				3F92ABDB1D944DD30012967D /* ViewController.swift in Sources */,
+				3F92ABF81D94534A0012967D /* GrupoContatos.swift in Sources */,
+				3F92ABF61D94534A0012967D /* Contato.swift in Sources */,
 				3F92ABD91D944DD30012967D /* AppDelegate.swift in Sources */,
+				3F92ABFB1D9457310012967D /* ContatoDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.uno.Meu-DataCore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -270,6 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.uno.Meu-DataCore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -292,6 +355,7 @@
 				3F92ABEC1D944DD30012967D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
